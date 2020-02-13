@@ -11,6 +11,7 @@ class MP3Importer
     Dir["#{path}/mp3s/*.mp3"].map do |f|
       File.basename f
     end
-    
+  end
+
 
 end
