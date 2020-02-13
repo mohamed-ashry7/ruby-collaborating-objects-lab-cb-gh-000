@@ -8,5 +8,6 @@ class MP3Importer
   end
   
   def files
+    names = Dir["#{path}/mp3s/*.mp3"]
 
 end
