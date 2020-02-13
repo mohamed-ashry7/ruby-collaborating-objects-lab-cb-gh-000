@@ -14,14 +14,19 @@ class Artist
     song = Song.new(song_name)
     song.artist=self
   end
+  
   def add_song(song)
     song.artist= self
   end
+  
   def songs
     Song.all.select do |song|
       song.artist == self
     end
   end
+  def self.find_or_create_by_name(name)
+    singer = self.all.find{|author| author.name ==name}
+    singer ||=self.new(name)
   def self.song_count
     Song.all.size
   end
