@@ -27,6 +27,14 @@ class Artist
   def self.find_or_create_by_name(name)
     singer = self.all.find{|author| author.name ==name}
     singer ||=self.new(name)
+  end
+  
+  def print_songs
+    Song.all.each do |song|
+
+    end 
+  end
+     
   def self.song_count
     Song.all.size
   end
