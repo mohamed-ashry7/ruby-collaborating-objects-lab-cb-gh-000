@@ -11,7 +11,7 @@ class MP3Importer
     arr = Dir["#{path}/mp3s/*.mp3"].map do |f|
       File.basename f
     end
-    pry.binding
+    
   end
 
   def import
