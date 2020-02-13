@@ -9,6 +9,7 @@ class MP3Importer
 
   def files
     puts path
+    puts "#{path}/mp3s/*.mp3"
     arr = Dir["#{path}/mp3s/*.mp3"].map do |f|
       File.basename f
     end
